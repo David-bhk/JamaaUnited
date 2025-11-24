@@ -1,0 +1,67 @@
+@import './colors.css';
+
+/* Reset Styles */
+* {
+  box-sizing: border-box;
+  line-height: normal;
+  font-family: inherit;
+  margin: unset;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+/* Gradient Text */
+.text-gradient-warm {
+  background: var(--gradient-warm);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-cool {
+  background: var(--gradient-cool);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Transitions */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Shadows */
+.shadow-soft {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.shadow-elevated {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Background Gradients */
+.bg-gradient-warm {
+  background: var(--gradient-warm);
+}
+
+.bg-gradient-cool {
+  background: var(--gradient-cool);
+}
+
+.bg-gradient-trust {
+  background: var(--gradient-trust);
+}
+
+.bg-gradient-hope {
+  background: var(--gradient-hope);
+}
+
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
