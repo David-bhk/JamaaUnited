@@ -2,78 +2,11 @@ import React, { useState } from 'react';
 import Icon from '../../../components/AppIcon';
 import Image from '../../../components/AppImage';
 import Button from '../../../components/ui/Button';
+import { pillarsData } from '../../../content/pillars';
 
 const PillarsSection = () => {
   const [activePillar, setActivePillar] = useState(0);
-
-  const pillars = [
-    {
-      id: 'upendo',
-      name: 'Upendo',
-      translation: 'Amour',
-      icon: 'Heart',
-      color: 'from-primary to-secondary',
-      bgColor: 'bg-indigo-50',
-      textColor: 'text-primary',
-      description: "L'amour est le fondement de toute transformation. Nous croyons que l'attention et la compassion véritables créent des espaces sûrs où les familles peuvent guérir, grandir et prospérer ensemble.",
-      image: "https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      stats: [
-        { 
-          number: "2,500+", 
-          label: "Familles Soutenues"
-        },
-        { 
-          number: "95%", 
-          label: "Rapportent des Liens Plus Forts"
-        }
-      ],
-      activities: ["Conseil Familial", "Groupes de Soutien Communautaire", "Cercles de Guérison", "Programmes de Mentorat"]
-    },
-    {
-      id: 'akili',
-      name: 'Akili',
-      translation: 'Intelligence',
-      icon: 'Brain',
-      color: 'from-secondary to-sky-500',
-      bgColor: 'bg-sky-50',
-      textColor: 'text-secondary',
-      description: "L'intelligence autonomise les familles avec des connaissances, des compétences et de la sagesse. Grâce à l'éducation et au renforcement des capacités, nous libérons le potentiel de chaque membre de la communauté.",
-      image: "https://images.pexels.com/photos/1181534/pexels-photo-1181534.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      stats: [
-        { 
-          number: "1,800+", 
-          label: "Personnes Formées"
-        },
-        { 
-          number: "12", 
-          label: "Programmes de Formation"
-        }
-      ],
-      activities: ["Formation en Leadership", "Éducation Financière", "Ateliers Parentaux", "Développement des Jeunes"]
-    },
-    {
-      id: 'matendo',
-      name: 'Matendo',
-      translation: 'Actions',
-      icon: 'Zap',
-      color: 'from-sky-500 to-cyan-500',
-      bgColor: 'bg-cyan-50',
-      textColor: 'text-sky-600',
-      description: "L'action transforme la connaissance en changement réel. Nous mobilisons les communautés pour prendre des mesures concrètes qui créent un impact durable dans leur vie quotidienne et les générations futures.",
-      image: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      stats: [
-        { 
-          number: "45", 
-          label: "Projets Actifs"
-        },
-        { 
-          number: "15", 
-          label: "Communautés Atteintes"
-        }
-      ],
-      activities: ["Projets Communautaires", "Campagnes de Plaidoyer", "Entreprises Sociales", "Programmes de Bénévolat"]
-    }
-  ];
+  const currentPillar = pillarsData?.[activePillar] ?? pillarsData?.[0];
 
   return (
     <section className="py-20 bg-background">
@@ -96,7 +29,7 @@ const PillarsSection = () => {
 
         {/* Pillar Navigation */}
         <div className="flex flex-col lg:flex-row justify-center mb-12 space-y-4 lg:space-y-0 lg:space-x-8">
-          {pillars?.map((pillar, index) => (
+          {pillarsData?.map((pillar, index) => (
             <button
               key={pillar?.id}
               onClick={() => setActivePillar(index)}
@@ -125,21 +58,21 @@ const PillarsSection = () => {
             {/* Content Side */}
             <div className="p-8 lg:p-12 flex flex-col justify-center">
               <div className="mb-6">
-                <div className={`inline-flex items-center space-x-3 bg-gradient-to-r ${pillars?.[activePillar]?.color} text-white rounded-full px-6 py-3 mb-4`}>
-                  <Icon name={pillars?.[activePillar]?.icon} size={20} />
+                <div className={`inline-flex items-center space-x-3 bg-gradient-to-r ${currentPillar?.color} text-white rounded-full px-6 py-3 mb-4`}>
+                  <Icon name={currentPillar?.icon} size={20} />
                   <span className="font-heading font-semibold text-lg">
-                    {pillars?.[activePillar]?.name} - {pillars?.[activePillar]?.translation}
+                    {currentPillar?.name} - {currentPillar?.translation}
                   </span>
                 </div>
               </div>
 
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                {pillars?.[activePillar]?.description}
+                {currentPillar?.summary}
               </p>
 
               {/* Stats */}
               <div className="grid grid-cols-2 gap-6 mb-8">
-                {pillars?.[activePillar]?.stats?.map((stat, index) => (
+                {currentPillar?.stats?.map((stat, index) => (
                   <div key={index} className="text-center">
                     <div className="text-2xl font-bold text-foreground mb-1">{stat?.number}</div>
                     <div className="text-sm text-muted-foreground">{stat?.label}</div>
@@ -153,9 +86,9 @@ const PillarsSection = () => {
                   Activités Clés:
                 </h4>
                 <div className="grid grid-cols-2 gap-2">
-                  {pillars?.[activePillar]?.activities?.map((activity, index) => (
+                  {currentPillar?.activities?.map((activity, index) => (
                     <div key={index} className="flex items-center space-x-2 text-sm text-muted-foreground">
-                      <Icon name="Check" size={16} className={pillars?.[activePillar]?.textColor} />
+                      <Icon name="Check" size={16} className={currentPillar?.textColor} />
                       <span>{activity}</span>
                     </div>
                   ))}
@@ -164,7 +97,7 @@ const PillarsSection = () => {
 
               <Button
                 variant="default"
-                className={`bg-gradient-to-r ${pillars?.[activePillar]?.color} hover:opacity-90 text-white shadow-soft hover:shadow-elevated transition-all duration-300`}
+                className={`bg-gradient-to-r ${currentPillar?.color} hover:opacity-90 text-white shadow-soft hover:shadow-elevated transition-all duration-300`}
               >
                 <Icon name="ArrowRight" size={16} className="mr-2" />
                 En Savoir Plus
@@ -174,11 +107,11 @@ const PillarsSection = () => {
             {/* Image Side */}
             <div className="relative h-64 lg:h-full min-h-[400px] overflow-hidden">
               <Image
-                src={pillars?.[activePillar]?.image}
-                alt={`${pillars?.[activePillar]?.name} pillar`}
+                src={currentPillar?.image}
+                alt={`${currentPillar?.name} pillar`}
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
-              <div className={`absolute inset-0 bg-gradient-to-t ${pillars?.[activePillar]?.color} opacity-20`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-t ${currentPillar?.color} opacity-20`}></div>
             </div>
           </div>
         </div>

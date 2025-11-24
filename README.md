@@ -1,16 +1,67 @@
-# React + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🇨🇩 Jamaa United
 
-Currently, two official plugins are available:
+Plateforme React (SPA) qui présente la mission de Jamaa United : renforcer les familles et les communautés de Goma à travers les piliers **Upendo**, **Akili** et **Matendo**. L'application met en avant les activités, l'équipe, les domaines d'impact et offre des points de contact clairs pour les visiteurs francophones.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+</div>
 
-## React Compiler
+## 🚀 Pile technique
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [React 18](https://react.dev) + [Vite](https://vitejs.dev) pour un développement ultra rapide
+- [Tailwind CSS](https://tailwindcss.com) + design tokens personnalisés (`src/styles/colors.css`)
+- [React Router](https://reactrouter.com) pour la navigation multi-pages
+- Composants maison (boutons, formulaires, modales…) regroupés sous `src/components`
 
-## Expanding the ESLint configuration
+## 📁 Structure du projet
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+├── pages/                 Pages principales (Accueil, À propos, Contact, Équipe…)
+├── components/            UI partagée (Bouton, Input, Header, Layout, etc.)
+├── content/               Données statiques réutilisables (ex. piliers Upendo/Akili/Matendo)
+├── styles/                Tailwind + feuilles globales (variables, gradients)
+└── utils/                 Helpers divers (ex. fonction `cn`)
+```
+
+## 🛠️ Développement
+
+### Prérequis
+- Node.js 18+
+- npm 9+
+
+### Installation
+```bash
+npm install
+```
+
+### Démarrer le serveur de dev
+```bash
+npm run dev
+```
+
+### Construire pour la production
+```bash
+npm run build
+```
+
+### Prévisualiser le build
+```bash
+npm run preview
+```
+
+## 🎨 Design & contenu
+
+- Palette bleue unifiée inspirée de la section **Équipe** (voir `src/styles/colors.css`).
+- Les textes et chiffres clés sont centralisés quand c'est pertinent : par exemple, les trois piliers sont définis dans `src/content/pillars.js` et consommés à la fois par la page d'accueil et la page « À propos ».
+- Les composants UI acceptent des variantes (`Button`, `Input`, `Select`, etc.) afin de garder une expérience cohérente.
+
+## 🤝 Contribution
+
+1. Créez une branche descriptive (`feat/palette-global`, `fix/contact-form`, …)
+2. Faites vos modifications + tests (`npm run build`)
+3. Ouvrez une Pull Request en décrivant : le pourquoi, les captures éventuelles, et les impacts UX/techniques
+
+## 📄 Licence
+
+Projet privé de Jamaa United. Merci de contacter l'équipe avant toute réutilisation du contenu ou de la charte graphique.
