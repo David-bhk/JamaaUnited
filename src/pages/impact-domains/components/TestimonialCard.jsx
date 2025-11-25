@@ -1,17 +1,20 @@
 import React from 'react';
 import Icon from '../../../components/AppIcon';
-import Image from '../../../components/AppImage';
+
+const getInitials = (name = '') =>
+  name
+    .split(' ')
+    .map((part) => part.charAt(0))
+    .join('')
+    .slice(0, 2)
+    .toUpperCase();
 
 const TestimonialCard = ({ testimonial }) => {
   return (
     <div className="bg-card rounded-lg shadow-soft p-6 h-full">
       <div className="flex items-start space-x-4 mb-4">
-        <div className="flex-shrink-0">
-          <Image
-            src={testimonial?.avatar}
-            alt={testimonial?.name}
-            className="w-12 h-12 rounded-full object-cover"
-          />
+        <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary font-semibold">
+          {getInitials(testimonial?.name)}
         </div>
         <div className="flex-1 min-w-0">
           <h4 className="font-heading font-semibold text-foreground text-sm">

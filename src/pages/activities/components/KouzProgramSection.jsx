@@ -1,6 +1,5 @@
 import React from 'react';
 import Icon from '../../../components/AppIcon';
-import Image from '../../../components/AppImage';
 import Button from '../../../components/ui/Button';
 
 const KouzProgramSection = ({ onJoinKouz }) => {
@@ -9,7 +8,6 @@ const KouzProgramSection = ({ onJoinKouz }) => {
     subtitle: 'Un programme unique de mentorat familial qui connecte les générations',
     description:
       `Le programme Kouz crée des liens durables entre les membres de la famille élargie, favorisant l'échange de connaissances, d'expériences et de soutien mutuel. À travers des activités structurées et des rencontres régulières, nous renforçons les liens familiaux et communautaires.`,
-    image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
     features: [
       {
         icon: 'Users',
@@ -70,24 +68,30 @@ const KouzProgramSection = ({ onJoinKouz }) => {
 
         {/* Main Content */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Image */}
-          <div className="relative">
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-elevated">
-              <Image
-                src={kouzData?.image}
-                alt="Kouz Program"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
-            </div>
-            
-            {/* Floating Stats Card */}
-            <div className="absolute -bottom-8 -right-8 bg-card rounded-lg shadow-elevated p-6 border border-border">
-              <div className="grid grid-cols-2 gap-4">
-                {kouzData?.stats?.slice(0, 2)?.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-2xl font-bold text-primary">{stat?.number}</div>
-                    <div className="text-xs text-muted-foreground">{stat?.label}</div>
+          {/* Abstract Illustration */}
+          <div className="relative bg-gradient-to-br from-secondary/20 via-primary/20 to-accent/20 rounded-3xl p-8 shadow-elevated overflow-hidden">
+            <div className="absolute -top-10 -right-10 w-56 h-56 bg-white/10 rounded-full blur-3xl" aria-hidden />
+            <div className="absolute -bottom-16 -left-16 w-72 h-72 bg-white/5 rounded-full blur-3xl" aria-hidden />
+            <div className="relative">
+              <p className="text-sm uppercase tracking-[0.3em] text-secondary-foreground/80">
+                Portrait du programme
+              </p>
+              <h3 className="text-3xl font-heading font-bold text-secondary-foreground mt-4">
+                Des familles qui restent connectées
+              </h3>
+              <p className="text-secondary-foreground/80 mt-4 leading-relaxed">
+                Sans photos génériques, nous mettons l’accent sur les liens authentiques créés entre cousins, tantes et grands-parents qui se forment chaque mois à l’écoute active et au mentorat.
+              </p>
+
+              <div className="grid grid-cols-2 gap-6 mt-8 text-center">
+                {kouzData?.stats?.slice(0, 4)?.map((stat, index) => (
+                  <div key={index} className="bg-white/20 rounded-2xl py-4">
+                    <div className="text-2xl font-heading font-bold text-secondary-foreground">
+                      {stat?.number}
+                    </div>
+                    <p className="text-xs uppercase tracking-wide text-secondary-foreground/70">
+                      {stat?.label}
+                    </p>
                   </div>
                 ))}
               </div>

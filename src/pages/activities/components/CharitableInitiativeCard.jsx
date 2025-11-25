@@ -1,6 +1,5 @@
 import React from 'react';
 import Icon from '../../../components/AppIcon';
-import Image from '../../../components/AppImage';
 import Button from '../../../components/ui/Button';
 
 const CharitableInitiativeCard = ({ initiative, onParticipate }) => {
@@ -18,45 +17,41 @@ const CharitableInitiativeCard = ({ initiative, onParticipate }) => {
 
   return (
     <div className="bg-card rounded-lg shadow-soft hover:shadow-elevated transition-smooth overflow-hidden">
-      <div className="relative h-56 overflow-hidden">
-        <Image
-          src={initiative?.image}
-          alt={initiative?.title}
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-        
-        <div className="absolute bottom-4 left-4 right-4">
-          <div className="bg-background/95 backdrop-blur-sm rounded-lg p-3">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-medium text-muted-foreground">Progrès</span>
-              <span className="text-xs font-medium text-foreground">
-                {Math.round(getProgressPercentage())}%
-              </span>
-            </div>
-            <div className="w-full bg-muted rounded-full h-2">
-              <div
-                className="bg-primary rounded-full h-2 transition-all duration-500"
-                style={{ width: `${getProgressPercentage()}%` }}
-              />
-            </div>
+      <div className="bg-gradient-to-br from-secondary/15 via-primary/10 to-accent/10 p-6 border-b border-border/50">
+        <div className="flex items-start justify-between mb-6">
+          <div>
+            <p className="text-xs uppercase tracking-wide text-muted-foreground">Initiative communautaire</p>
+            <h3 className="text-2xl font-heading font-semibold text-foreground mt-2">
+              {initiative?.title}
+            </h3>
+            <p className="text-sm text-muted-foreground mt-2">
+              {initiative?.description}
+            </p>
           </div>
-        </div>
-      </div>
-      <div className="p-6">
-        <div className="flex items-start justify-between mb-3">
-          <h3 className="text-lg font-heading font-semibold text-foreground">
-            {initiative?.title}
-          </h3>
-          <div className="flex items-center space-x-1 bg-primary/10 px-2 py-1 rounded-full">
-            <Icon name="Heart" size={14} className="text-primary" />
-            <span className="text-xs font-medium text-primary">{initiative?.supporters}</span>
+          <div className="flex items-center space-x-1 bg-primary/10 px-3 py-1 rounded-full text-primary text-xs font-medium">
+            <Icon name="Users" size={14} />
+            <span>{initiative?.supporters} soutiens</span>
           </div>
         </div>
 
-        <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
-          {initiative?.description}
-        </p>
+        <div>
+          <div className="flex items-center justify-between text-xs font-medium text-muted-foreground mb-2">
+            <span>Progrès</span>
+            <span>{Math.round(getProgressPercentage())}%</span>
+          </div>
+          <div className="w-full bg-background/50 rounded-full h-2">
+            <div
+              className="bg-primary rounded-full h-2 transition-all duration-500"
+              style={{ width: `${getProgressPercentage()}%` }}
+            />
+          </div>
+        </div>
+      </div>
+        <div className="p-6">
+        <div className="flex items-start justify-between mb-3">
+          <h4 className="text-lg font-heading font-semibold text-foreground">Objectifs financiers</h4>
+          <Icon name="Heart" size={16} className="text-primary" />
+        </div>
 
         <div className="space-y-3 mb-6">
           <div className="flex items-center justify-between">

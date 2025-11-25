@@ -1,7 +1,17 @@
 import React from 'react';
 import Icon from '../../../components/AppIcon';
-import Image from '../../../components/AppImage';
 import Button from '../../../components/ui/Button';
+
+const CATEGORY_STYLES = {
+  family: { gradient: 'from-primary/20 via-primary/10 to-primary/30', icon: 'Home', label: 'Famille' },
+  education: { gradient: 'from-secondary/20 via-secondary/10 to-secondary/30', icon: 'BookOpen', label: 'Éducation' },
+  health: { gradient: 'from-rose-200/60 via-rose-100/40 to-rose-300/40', icon: 'HeartPulse', label: 'Santé' },
+  economic: { gradient: 'from-emerald-200/60 via-emerald-100/40 to-emerald-300/40', icon: 'Coins', label: 'Économie' },
+  leadership: { gradient: 'from-indigo-200/60 via-indigo-100/40 to-indigo-300/40', icon: 'Award', label: 'Leadership' },
+  environment: { gradient: 'from-lime-200/60 via-lime-100/40 to-lime-300/40', icon: 'Leaf', label: 'Environnement' },
+  peace: { gradient: 'from-amber-200/60 via-amber-100/40 to-amber-300/40', icon: 'Handshake', label: 'Paix et réconciliation' },
+  default: { gradient: 'from-muted/40 via-muted/30 to-muted/20', icon: 'Sparkles', label: 'Programme' }
+};
 
 const DomainModal = ({ domain, isOpen, onClose }) => {
   if (!isOpen || !domain) return null;
@@ -16,37 +26,37 @@ const DomainModal = ({ domain, isOpen, onClose }) => {
     console.log(`Sharing ${domain?.title} on ${platform}`);
   };
 
+  const categoryStyle = CATEGORY_STYLES[domain?.category] ?? CATEGORY_STYLES.default;
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
       <div className="bg-card rounded-lg shadow-elevated max-w-4xl w-full max-h-[90vh] overflow-y-auto">
         {/* Header */}
-        <div className="relative">
-          <div className="h-64 overflow-hidden rounded-t-lg">
-            <Image
-              src={domain?.image}
-              alt={domain?.title}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        <div className={`relative rounded-t-lg bg-gradient-to-br ${categoryStyle.gradient} p-8 overflow-hidden`}> 
+          <div className="absolute inset-y-0 right-0 w-1/2 bg-white/10 blur-3xl" aria-hidden />
+          <div className="relative flex flex-col gap-4 text-foreground">
+            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-foreground/70">
+              <Icon name={categoryStyle.icon} size={16} />
+              <span>{categoryStyle.label}</span>
+            </div>
+            <div>
+              <h2 className="text-3xl font-heading font-bold text-foreground">
+                {domain?.title}
+              </h2>
+              <p className="text-foreground/80 text-lg mt-2">
+                {domain?.subtitle}
+              </p>
+            </div>
           </div>
-          
+
           <Button
             variant="ghost"
             size="icon"
             onClick={onClose}
-            className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-foreground hover:bg-white"
+            className="absolute top-4 right-4 bg-background/70 text-foreground hover:bg-background"
           >
             <Icon name="X" size={20} />
           </Button>
-
-          <div className="absolute bottom-6 left-6 right-6">
-            <h2 className="text-white font-heading font-bold text-2xl mb-2">
-              {domain?.title}
-            </h2>
-            <p className="text-white/90 text-lg">
-              {domain?.subtitle}
-            </p>
-          </div>
         </div>
 
         {/* Content */}

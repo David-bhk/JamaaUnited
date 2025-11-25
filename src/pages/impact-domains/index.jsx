@@ -26,8 +26,7 @@ const IMPACT_DOMAINS = [
     category: 'family',
     familiesServed: 847,
     communitiesReached: 45,
-    impactScore: 92,
-    image: 'https://images.unsplash.com/photo-1609220136736-443140cffec6?w=1200&h=800&fit=crop',
+  impactScore: 92,
     programs: [
       {
         name: 'Parole en famille',
@@ -54,8 +53,7 @@ const IMPACT_DOMAINS = [
     category: 'education',
     familiesServed: 1243,
     communitiesReached: 67,
-    impactScore: 88,
-    image: 'https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=1200&h=800&fit=crop',
+  impactScore: 88,
     programs: [
       {
         name: 'Bourses solidaires',
@@ -82,8 +80,7 @@ const IMPACT_DOMAINS = [
     category: 'health',
     familiesServed: 2156,
     communitiesReached: 89,
-    impactScore: 85,
-    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&h=800&fit=crop',
+  impactScore: 85,
     programs: [
       {
         name: 'Clinique mobile',
@@ -110,8 +107,7 @@ const IMPACT_DOMAINS = [
     category: 'economic',
     familiesServed: 634,
     communitiesReached: 34,
-    impactScore: 91,
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=800&fit=crop',
+  impactScore: 91,
     programs: [
       { name: 'Kits de démarrage', description: 'Capital de lancement pour les petites entreprises' },
       { name: 'Coopératives agro', description: 'Mutualisation des intrants et de la distribution' },
@@ -129,8 +125,7 @@ const IMPACT_DOMAINS = [
     category: 'leadership',
     familiesServed: 423,
     communitiesReached: 28,
-    impactScore: 94,
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=800&fit=crop',
+  impactScore: 94,
     programs: [
       { name: 'École du leadership', description: '12 semaines de coaching intensif' },
       { name: 'Ateliers plaidoyer', description: 'Stratégies pour défendre les droits locaux' },
@@ -148,8 +143,7 @@ const IMPACT_DOMAINS = [
     category: 'environment',
     familiesServed: 756,
     communitiesReached: 52,
-    impactScore: 87,
-    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&h=800&fit=crop',
+  impactScore: 87,
     programs: [
       { name: 'Brigades vertes', description: 'Plantations communautaires et suivi des arbres' },
       { name: 'Fermes écoles', description: 'Démonstrations d’agriculture durable' },
@@ -167,8 +161,7 @@ const IMPACT_DOMAINS = [
     category: 'peace',
     familiesServed: 892,
     communitiesReached: 41,
-    impactScore: 89,
-    image: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1200&h=800&fit=crop',
+  impactScore: 89,
     programs: [
       { name: 'Cercles de vérité', description: 'Rencontres sécurisées animées par nos médiateurs' },
       { name: 'Trauma care', description: 'Prise en charge des survivants et survivantes' },
@@ -185,7 +178,6 @@ const TESTIMONIALS = [
     domain: 'Renforcement familial',
     quote:
       "Grâce aux séances d’écoute de Jamaa United, nous avons retrouvé le calme à la maison. Les enfants se sentent enfin entendus.",
-    avatar: 'https://randomuser.me/api/portraits/women/32.jpg',
     date: 'Mars 2024',
     impact: 'Famille réconciliée'
   },
@@ -196,7 +188,6 @@ const TESTIMONIALS = [
     domain: 'Développement économique',
     quote:
       "Le microcrédit m’a permis d’ouvrir mon atelier de menuiserie. Aujourd’hui j’emploie trois jeunes du quartier.",
-    avatar: 'https://randomuser.me/api/portraits/men/45.jpg',
     date: 'Février 2024',
     impact: 'Entreprise lancée'
   },
@@ -207,7 +198,6 @@ const TESTIMONIALS = [
     domain: 'Éducation',
     quote:
       "Ma fille est entrée à l’université grâce à la bourse. Toute la famille croit de nouveau en l’avenir.",
-    avatar: 'https://randomuser.me/api/portraits/women/28.jpg',
     date: 'Janvier 2024',
     impact: 'Bourse universitaire'
   }
