@@ -2,23 +2,9 @@ import React from 'react';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
 
-const HERO_METRICS = [
-  {
-    label: 'Familles accompagnées',
-    details: 'Publication après la première cohorte 2025'
-  },
-  {
-    label: 'Communautés partenaires',
-    details: 'Cartographie en cours avec les leaders locaux'
-  },
-  {
-    label: "Domaines d'impact actifs",
-    details: 'Activation progressive prévue Q2 2025'
-  },
-  {
-    label: "Années d'activité",
-    details: 'Le mouvement démarre cette année'
-  }
+const HERO_HIGHLIGHTS = [
+  '15 familles testent le parcours en cercle fermé',
+  'Chaque étape est documentée avant ouverture large'
 ];
 
 const HeroSection = () => {
@@ -45,56 +31,41 @@ const HeroSection = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
             <div className="mb-6">
-              <div className="inline-flex items-center space-x-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white/90 backdrop-blur-md">
-                <Icon name="Activity" size={16} className="text-accent" />
-                <span>Lancement Jamaa United • 2025</span>
-              </div>
+              <Button
+                variant="outline"
+                size="sm"
+                className="border-white/20 text-white/80 hover:bg-white/10"
+              >
+                <Icon name="MessageCircle" size={16} className="mr-2" />
+                Parler avec Jamaa
+              </Button>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold leading-tight text-white drop-shadow-[0_5px_35px_rgba(0,0,0,0.55)]">
-              Construire des familles fortes avant de publier les chiffres
+              Jamaa United démarre en petit comité pour bâtir juste
             </h1>
 
-            <p className="mt-6 text-lg sm:text-xl text-white/90 max-w-3xl font-body leading-relaxed">
-              Jamaa United démarre son parcours en posant les bases : aligner les familles, cartographier les besoins et co-créer les domaines Upendo, Akili, Matendo avec les leaders de Goma. Les indicateurs seront rendus publics dès la première cohorte.
+            <p className="mt-6 text-lg sm:text-xl text-white/85 max-w-2xl font-body leading-relaxed">
+              Nous avançons lentement, famille après famille, sans promettre de statistiques tant que les bases ne sont pas solides.
             </p>
 
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-8 flex items-center gap-3">
               <Button
-                variant="default"
-                size="lg"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-0.5 border border-accent/20"
+                variant="ghost"
+                size="sm"
+                className="text-white/90 hover:text-white"
               >
-                <Icon name="Users" size={20} className="mr-2" />
-                Rejoindre la liste d'attente
+                <Icon name="ArrowRight" size={16} className="mr-2" />
+                Demander un court appel
               </Button>
-
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-white/40 text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300 hover:border-white/70"
-              >
-                <Icon name="Mail" size={20} className="mr-2" />
-                Être informé du lancement
-              </Button>
+              <span className="text-xs uppercase tracking-widest text-white/60">Réponse sous 48h</span>
             </div>
 
-            <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
-              {HERO_METRICS.map((metric) => (
-                <div
-                  key={metric.label}
-                  className="rounded-xl border border-white/10 bg-white/5 p-4 text-white shadow-[0_20px_60px_rgba(0,0,0,0.25)] backdrop-blur-md"
-                >
-                  <p className="text-xs uppercase tracking-wide text-white/70 mb-2">
-                    {metric.label}
-                  </p>
-                  <p className="text-base font-semibold leading-snug text-white">
-                    {metric.details}
-                  </p>
-                  <span className="mt-3 inline-flex items-center text-[11px] uppercase tracking-widest text-white/60">
-                    <Icon name="Clock" size={12} className="mr-1" />
-                    Mise à jour après la phase pilote
-                  </span>
+            <div className="mt-10 flex flex-col gap-3 border-l border-white/15 pl-6 text-white/85">
+              {HERO_HIGHLIGHTS.map((highlight) => (
+                <div key={highlight} className="flex items-start gap-3">
+                  <Icon name="Check" size={18} className="mt-1 text-accent" />
+                  <p className="text-base leading-snug">{highlight}</p>
                 </div>
               ))}
             </div>

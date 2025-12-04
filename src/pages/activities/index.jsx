@@ -19,10 +19,10 @@ const Activities = () => {
   const formationPrograms = [
     {
       id: 1,
-      title: 'Formation Leadership Familial',
-  description: 'Développez vos compétences de leadership pour renforcer votre famille et votre communauté. Ce programme complet couvre la communication, la résolution de conflits et la prise de décision collaborative.',
+      title: 'Leadership familial express',
+      description: '8 semaines pour réapprendre à se parler sans détour.',
       duration: '8 semaines',
-      participants: '25-30',
+      participants: '12',
       location: 'Centre Communautaire Goma',
       schedule: 'Samedi 14h-17h',
       price: 'free',
@@ -32,42 +32,16 @@ const Activities = () => {
     },
     {
       id: 2,
-      title: 'Atelier Parentalité Positive',
-  description: 'Apprenez des techniques de parentalité bienveillante basées sur la recherche pour créer des relations familiales plus fortes et plus harmonieuses.',
+      title: 'Parenting minimaliste',
+      description: '6 rencontres pour poser trois règles claires à la maison.',
       duration: '6 semaines',
-      participants: '15-20',
+      participants: '10',
       location: 'Salle Communautaire',
       schedule: 'Mercredi 18h-20h',
       price: 'free',
       status: 'waitlist',
       rating: 4,
       category: 'parenting'
-    },
-    {
-      id: 3,
-      title: 'Entrepreneuriat Familial',
-  description: 'Découvrez comment créer et gérer une entreprise familiale durable qui profite à toute la communauté.',
-      duration: '10 semaines',
-      participants: '12-15',
-      location: 'Centre d\'Innovation',
-      schedule: 'Vendredi 16h-19h',
-      price: '$50',
-      status: 'open',
-      rating: 5,
-      category: 'business'
-    },
-    {
-      id: 4,
-      title: 'Gestion Financière Familiale',
-  description: 'Maîtrisez les bases de la gestion financière pour assurer la stabilité économique de votre famille.',
-      duration: '4 semaines',
-      participants: '20-25',
-      location: 'Banque Communautaire',
-      schedule: 'Mardi 19h-21h',
-      price: 'free',
-      status: 'closed',
-      rating: 4,
-      category: 'finance'
     }
   ];
 
@@ -75,30 +49,21 @@ const Activities = () => {
   const charitableInitiatives = [
     {
       id: 1,
-  title: 'Éducation pour Tous',
-  description: 'Fournir des fournitures scolaires et un soutien éducatif aux enfants défavorisés de notre communauté.',
-      goal: 15000,
-      raised: 11250,
-      supporters: 89,
-      endDate: '2025-03-15'
-    },
-    {
-      id: 2,
-  title: 'Jardin Communautaire',
-  description: 'Créer un espace vert partagé pour cultiver des légumes frais et renforcer les liens communautaires.',
+      title: 'Kit école tranquille',
+      description: '50 élèves reçoivent un pack simple cahiers + uniforme.',
       goal: 8000,
       raised: 6400,
       supporters: 56,
       endDate: '2025-02-28'
     },
     {
-      id: 3,
-  title: 'Soins de Santé Mobiles',
-  description: 'Apporter des services de santé de base aux familles dans les zones rurales éloignées.',
-      goal: 25000,
-      raised: 18750,
-      supporters: 124,
-      endDate: '2025-04-30'
+      id: 2,
+      title: 'Potager quartier pilote',
+      description: 'Un seul bloc urbain teste l\'autosuffisance en légumes.',
+      goal: 5000,
+      raised: 3100,
+      supporters: 34,
+      endDate: '2025-03-20'
     }
   ];
 
@@ -183,8 +148,8 @@ const Activities = () => {
               Nos Activités
             </h1>
 
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
-              Découvrez nos programmes de formation, initiatives caritatives et événements communautaires conçus pour renforcer les familles et transformer les communautés.
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+              Un aperçu court : deux formations, quelques initiatives, un calendrier vivant. Rien de plus.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
