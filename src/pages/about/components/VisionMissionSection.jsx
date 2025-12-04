@@ -1,139 +1,86 @@
 import React from 'react';
 import Icon from '../../../components/AppIcon';
-import Image from '../../../components/AppImage';
+
+const CARDS = [
+  {
+    title: 'Vision',
+    text:
+      'Rester proches de 15 familles, documenter ce qui marche et partager uniquement ce qui tient sur le terrain.',
+    icon: 'Eye',
+    chip: {
+      bg: 'bg-primary/10',
+      text: 'text-primary'
+    }
+  },
+  {
+    title: 'Mission',
+    text:
+      'Upendo, Akili et Matendo : trois piliers appliqués chaque semaine, carnet ouvert et voix des familles en premier.',
+    icon: 'Target',
+    chip: {
+      bg: 'bg-secondary/10',
+      text: 'text-secondary'
+    }
+  }
+];
+
+const VALUES = [
+  {
+    title: 'Familles limitées',
+    description: '15 familles maximum pour rester joignables et honnêtes.',
+    icon: 'Users'
+  },
+  {
+    title: 'Outils courts',
+    description: 'Chaque ressource tient sur une page et un mémo audio.',
+    icon: 'FileText'
+  },
+  {
+    title: 'Notes partagées',
+    description: 'Succès comme blocages sont consignés dès la séance.',
+    icon: 'ClipboardCheck'
+  }
+];
 
 const VisionMissionSection = () => {
-
-  const content = {
-    sectionTitle: "Notre Vision et Mission",
-    visionTitle: "Vision",
-    visionText: `Un monde où chaque famille sert de catalyseur pour une transformation sociétale positive, enracinée dans l'amour, guidée par la sagesse, et exprimée par des actions significatives. Nous envisageons des communautés où la force des liens familiaux crée des ondulations de changement qui s'étendent bien au-delà des foyers individuels.`,
-    missionTitle: "Mission",
-    missionText: `Renforcer les familles et les communautés en République Démocratique du Congo à travers des programmes de soutien complets qui incarnent nos trois piliers : Upendo (Amour), Akili (Intelligence), et Matendo (Actions). Nous travaillons à construire des ponts entre les valeurs communautaires traditionnelles et l'innovation sociale moderne.`,
-    coreValues: "Valeurs Fondamentales",
-    description: "Ces principes fondamentaux guident chaque aspect de notre travail et définissent qui nous sommes en tant qu'organisation.",
-    values: [
-      {
-        title: "Approche Centrée sur la Famille",
-        description: "Nous croyons que les familles fortes sont le fondement de communautés prospères et de changements sociaux durables."
-      },
-      {
-        title: "Respect Culturel", 
-        description: "Nous honorons les traditions locales tout en promouvant des valeurs progressistes qui renforcent les liens familiaux et communautaires."
-      },
-      {
-        title: "Partenariat Collaboratif",
-        description: "Nous travaillons aux côtés des communautés en tant que partenaires, pas en tant qu'agents externes, favorisant l'appropriation locale et la durabilité."
-      },
-      {
-        title: "Impact Basé sur les Preuves",
-        description: "Nos programmes sont fondés sur la recherche et continuellement évalués pour assurer des résultats significatifs et mesurables."
-      }
-    ]
-  };
-
   return (
     <section className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-heading font-bold text-foreground mb-4">
-            {content.sectionTitle}
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <p className="text-sm uppercase tracking-[0.25em] text-muted-foreground">Vision & Mission</p>
+          <h2 className="mt-3 text-3xl font-heading font-bold text-foreground">Notre boussole</h2>
+          <p className="mt-3 text-base text-muted-foreground">
+            Deux phrases qui nous servent de filtre avant chaque réunion.
+          </p>
         </div>
 
-        {/* Vision & Mission Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-20">
-          {/* Vision */}
-          <div className="space-y-6">
-            <div className="flex items-center space-x-4">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-trust to-blue-600 flex items-center justify-center shadow-soft">
-                <Icon name="Eye" size={28} className="text-white" />
+        <div className="grid gap-6 md:grid-cols-2">
+          {CARDS.map((card) => (
+            <div key={card.title} className="rounded-2xl border border-border bg-card/70 p-6">
+              <div className={`flex h-11 w-11 items-center justify-center rounded-full ${card.chip.bg}`}>
+                <Icon name={card.icon} size={20} className={card.chip.text} />
               </div>
-              <h3 className="text-2xl font-heading font-bold text-foreground">
-                {content.visionTitle}
-              </h3>
+              <h3 className="mt-4 text-xl font-heading font-semibold text-foreground">{card.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{card.text}</p>
             </div>
-            
-            <div className="bg-gradient-trust p-8 rounded-2xl shadow-soft">
-              <p className="text-lg text-foreground leading-relaxed">
-                {content.visionText}
-              </p>
-            </div>
-
-            <div className="relative h-64 rounded-xl overflow-hidden shadow-elevated">
-              <Image
-                src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?w=600&h=400&fit=crop"
-                alt="Community vision - families working together"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-            </div>
-          </div>
-
-          {/* Mission */}
-          <div className="space-y-6">
-            <div className="flex items-center space-x-4">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-secondary to-sky-500 flex items-center justify-center shadow-soft">
-                <Icon name="Target" size={28} className="text-white" />
-              </div>
-              <h3 className="text-2xl font-heading font-bold text-foreground">
-                {content.missionTitle}
-              </h3>
-            </div>
-            
-            <div className="bg-gradient-warm p-8 rounded-2xl shadow-soft">
-              <p className="text-lg text-foreground leading-relaxed">
-                {content.missionText}
-              </p>
-            </div>
-
-            <div className="relative h-64 rounded-xl overflow-hidden shadow-elevated">
-              <Image
-                src="https://images.pixabay.com/photo/2016/11/29/13/14/attractive-1869761_1280.jpg?w=600&h=400&fit=crop"
-                alt="Mission in action - community development programs"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-            </div>
-          </div>
+          ))}
         </div>
 
-        {/* Core Values */}
-        <div className="space-y-12">
-          <div className="text-center">
-            <h3 className="text-2xl lg:text-3xl font-heading font-bold text-foreground mb-4">
-              {content.coreValues}
-            </h3>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              {content.description}
-            </p>
+        <div className="mt-14 rounded-2xl border border-border bg-muted/30 p-6">
+          <div className="flex items-center justify-between flex-wrap gap-4">
+            <div>
+              <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">Notre manière de faire</p>
+              <h3 className="mt-2 text-2xl font-heading font-bold text-foreground">Trois réflexes simples</h3>
+            </div>
           </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {content.values.map((value, index) => (
-              <div 
-                key={index}
-                className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-elevated transition-smooth group"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-soft group-hover:scale-110 transition-smooth">
-                    <Icon 
-                      name={index === 0 ? "Home" : index === 1 ? "Globe" : index === 2 ? "Handshake" : "BarChart3"} 
-                      size={20} 
-                      className="text-white" 
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="text-xl font-heading font-semibold text-foreground mb-3">
-                      {value.title}
-                    </h4>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {value.description}
-                    </p>
-                  </div>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {VALUES.map((value) => (
+              <div key={value.title} className="rounded-2xl border border-border bg-card p-5">
+                <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-muted">
+                  <Icon name={value.icon} size={16} className="text-primary" />
                 </div>
+                <h4 className="text-lg font-heading font-semibold text-foreground">{value.title}</h4>
+                <p className="mt-2 text-sm text-muted-foreground">{value.description}</p>
               </div>
             ))}
           </div>
