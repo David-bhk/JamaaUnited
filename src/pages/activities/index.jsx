@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Icon from '../../components/AppIcon';
 import Button from '../../components/ui/Button';
-import Header from '../../components/ui/Header';
 import ProgramCard from './components/ProgramCard';
 import CharitableInitiativeCard from './components/CharitableInitiativeCard';
 import KouzProgramSection from './components/KouzProgramSection';
@@ -133,7 +132,6 @@ const Activities = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
       {/* Hero Section */}
       <section className="relative pt-28 pb-20 bg-gradient-warm overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5" />

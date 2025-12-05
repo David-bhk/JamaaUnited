@@ -1,5 +1,4 @@
 import React, { useMemo, useState } from 'react';
-import Header from '../../components/ui/Header';
 import DomainCard from './components/DomainCard';
 import FilterBar from './components/FilterBar';
 import ImpactMetrics from './components/ImpactMetrics';
@@ -117,8 +116,7 @@ const ImpactDomains = () => {
 
   return (
     <div className="bg-background text-foreground min-h-screen">
-      <Header variant="simple" />
-      <main className="pb-20">
+      <main className="pt-16 pb-20">
         <section className="bg-gradient-warm text-foreground pt-24 pb-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-sm uppercase tracking-[0.2em] text-primary-foreground/80 mb-4">

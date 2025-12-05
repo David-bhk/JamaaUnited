@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../../components/ui/Header';
 import TeamHero from './components/TeamHero';
 import TeamStats from './components/TeamStats';
 import TeamFilter from './components/TeamFilter';
@@ -244,7 +243,6 @@ const Team = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="px-4 sm:px-6 lg:px-8 py-12">
@@ -314,94 +312,6 @@ const Team = () => {
             <JoinTeamCTA currentLanguage={currentLanguage} />
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className="bg-foreground text-white py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              {/* Logo & Description */}
-              <div className="md:col-span-2 space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary">
-                    <Icon name="Shield" size={20} className="text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-heading font-semibold">Jamaa United</h3>
-                    <p className="text-sm text-gray-300">
-                      {currentLanguage === 'en' ? 'Building Stronger Communities' : 'Construire des Communautés Plus Fortes'}
-                    </p>
-                  </div>
-                </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {currentLanguage === 'en' ?'Empowering families and strengthening communities through love, intelligence, and action.' :'Autonomiser les familles et renforcer les communautés par l\'amour, l\'intelligence et l\'action.'
-                  }
-                </p>
-              </div>
-
-              {/* Quick Links */}
-              <div className="space-y-4">
-                <h4 className="text-sm font-semibold uppercase tracking-wider">
-                  {currentLanguage === 'en' ? 'Quick Links' : 'Liens Rapides'}
-                </h4>
-                <div className="space-y-2">
-                  {[
-                    { name: currentLanguage === 'en' ? 'About Us' : 'À Propos', href: '/about' },
-                    { name: currentLanguage === 'en' ? 'Our Work' : 'Notre Travail', href: '/impact-domains' },
-                    { name: currentLanguage === 'en' ? 'Get Involved' : 'S\'Impliquer', href: '/activities' },
-                    { name: currentLanguage === 'en' ? 'Contact' : 'Contact', href: '/contact' }
-                  ]?.map((link) => (
-                    <a
-                      key={link?.href}
-                      href={link?.href}
-                      className="block text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {link?.name}
-                    </a>
-                  ))}
-                </div>
-              </div>
-
-              {/* Contact Info */}
-              <div className="space-y-4">
-                <h4 className="text-sm font-semibold uppercase tracking-wider">
-                  {currentLanguage === 'en' ? 'Contact' : 'Contact'}
-                </h4>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2 text-sm text-gray-300">
-                    <Icon name="MapPin" size={14} />
-                    <span>Goma, North Kivu, DRC</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-sm text-gray-300">
-                    <Icon name="Mail" size={14} />
-                    <span>info@jamaaunited.org</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-sm text-gray-300">
-                    <Icon name="Phone" size={14} />
-                    <span>+243 123 456 789</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Bottom Bar */}
-            <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
-              <p className="text-sm text-gray-300">
-                © {new Date()?.getFullYear()} Jamaa United. {currentLanguage === 'en' ? 'All rights reserved.' : 'Tous droits réservés.'}
-              </p>
-              <div className="flex space-x-4 mt-4 sm:mt-0">
-                {['Facebook', 'Twitter', 'Linkedin', 'Instagram']?.map((platform) => (
-                  <a
-                    key={platform}
-                    href="#"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <Icon name={platform} size={16} />
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-        </footer>
       </main>
     </div>
   );
