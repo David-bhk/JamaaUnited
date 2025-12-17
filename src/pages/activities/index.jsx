@@ -78,11 +78,6 @@ const Activities = () => {
       icon: 'Heart'
     },
     {
-      id: 'kouz',
-  label: 'Programme Kouz',
-      icon: 'Users'
-    },
-    {
       id: 'calendar',
   label: 'Calendrier',
       icon: 'Calendar'
@@ -276,10 +271,11 @@ const Activities = () => {
           </div>
         )}
 
-        {/* Kouz Program */}
+        {/* Kouz Program - hidden for now
         {activeTab === 'kouz' && (
           <KouzProgramSection onJoinKouz={handleKouzJoin} />
         )}
+        */}
 
         {/* Community Calendar */}
         {activeTab === 'calendar' && (

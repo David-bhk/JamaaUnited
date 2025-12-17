@@ -14,7 +14,7 @@ const CallToAction = () => {
       color: 'from-primary to-secondary',
       bgColor: 'bg-indigo-50',
       iconColor: 'text-primary',
-      image: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+      image: "https://placehold.co/600x400/6366f1/ffffff?text=B%C3%A9n%C3%A9volat"
     },
     {
       id: 'partner',
@@ -25,7 +25,7 @@ const CallToAction = () => {
       color: 'from-secondary to-sky-500',
       bgColor: 'bg-sky-50',
       iconColor: 'text-secondary',
-      image: "https://images.pexels.com/photos/1181534/pexels-photo-1181534.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+      image: "https://placehold.co/600x400/0ea5e9/ffffff?text=Partenariat"
     },
     {
       id: 'support',
@@ -36,7 +36,7 @@ const CallToAction = () => {
       color: 'from-sky-500 to-cyan-500',
       bgColor: 'bg-cyan-50',
       iconColor: 'text-sky-600',
-      image: "https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+      image: "https://placehold.co/600x400/06b6d4/ffffff?text=Soutien"
     }
   ];
 
@@ -149,7 +149,7 @@ const CallToAction = () => {
             <div className="relative">
               <div className="relative h-64 lg:h-80 rounded-2xl overflow-hidden">
                 <Image
-                  src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+                  src="https://placehold.co/600x400/8b5cf6/ffffff?text=Newsletter"
                   alt="Community newsletter"
                   className="w-full h-full object-cover"
                 />

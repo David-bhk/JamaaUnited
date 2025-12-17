@@ -13,9 +13,9 @@ export const pillarsData = [
     description:
       "Renforcer la cohésion sociale et la paix à travers des cercles d'écoute et de solidarité familiale.",
     image:
-      'https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      'https://placehold.co/800x600/ec4899/ffffff?text=Upendo',
     detailImage:
-      'https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&h=800&fit=crop',
+      'https://placehold.co/600x800/ec4899/ffffff?text=Amour',
     stats: [
       { number: '10 familles', label: 'objectif 2025' }
     ],
@@ -44,9 +44,9 @@ export const pillarsData = [
     description:
       "Formation et accompagnement pour développer le leadership familial et communautaire.",
     image:
-      'https://images.pexels.com/photos/1181534/pexels-photo-1181534.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      'https://placehold.co/800x600/3b82f6/ffffff?text=Akili',
     detailImage:
-      'https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?w=600&h=800&fit=crop',
+      'https://placehold.co/600x800/3b82f6/ffffff?text=Intelligence',
     stats: [
       { number: '100 familles', label: 'objectif 2026' }
     ],
@@ -75,9 +75,9 @@ export const pillarsData = [
     description:
       "Initiatives collectives en éducation, santé, entrepreneuriat et développement communautaire.",
     image:
-      'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      'https://placehold.co/800x600/f59e0b/ffffff?text=Matendo',
     detailImage:
-      'https://images.pixabay.com/photo/2016/11/19/21/05/hand-1841827_1280.jpg?w=600&h=800&fit=crop',
+      'https://placehold.co/600x800/f59e0b/ffffff?text=Actions',
     stats: [
       { number: '1 000 000', label: 'familles d\'ici 2030' }
     ],

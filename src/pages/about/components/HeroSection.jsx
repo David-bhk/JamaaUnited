@@ -61,7 +61,7 @@ const HeroSection = () => {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10">
               <Image
-                src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=700&fit=crop"
+                src="https://placehold.co/600x700/1e293b/ffffff?text=Jamaa+United"
                 alt="Famille réunie"
                 className="w-full h-96 object-cover"
               />
