@@ -39,6 +39,7 @@ const Routes = () => {
                   </Suspense>
                 }
               />
+              {/* Team route hidden from online view - uncomment to restore
               <Route
                 path="/team"
                 element={
@@ -47,6 +48,7 @@ const Routes = () => {
                   </Suspense>
                 }
               />
+              */}
               <Route
                 path="/impact-domains"
                 element={

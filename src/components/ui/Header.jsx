@@ -21,7 +21,6 @@ const Header = () => {
     { text: "À Propos", path: "/about" },
     { text: "Activités", path: "/activities" },
     { text: "Domaines d'Impact", path: "/impact-domains" },
-    { text: "Équipe", path: "/team" },
     { text: "Contact", path: "/contact" }
   ];
 

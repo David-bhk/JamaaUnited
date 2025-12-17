@@ -35,8 +35,8 @@ const Layout = () => {
                 <a href="/activities" className="block text-muted-foreground hover:text-white transition-smooth">
                   Nos Activités
                 </a>
-                <a href="/team" className="block text-muted-foreground hover:text-white transition-smooth">
-                  Notre Équipe
+                <a href="/about" className="block text-muted-foreground hover:text-white transition-smooth">
+                  À Propos
                 </a>
               </div>
             </div>
