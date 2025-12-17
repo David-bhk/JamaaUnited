@@ -3,8 +3,8 @@ import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
 
 const HERO_HIGHLIGHTS = [
-  '15 familles testent le parcours en cercle fermé',
-  'Chaque étape est documentée avant ouverture large'
+  'La famille est la cellule de base de toute société',
+  'Si la famille va bien, la société ira aussi mieux'
 ];
 
 const HeroSection = () => {
@@ -42,11 +42,11 @@ const HeroSection = () => {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold leading-tight text-white drop-shadow-[0_5px_35px_rgba(0,0,0,0.55)]">
-              Jamaa United démarre en petit comité pour bâtir juste
+              Construire une communauté unie où les familles sont les piliers de la paix et du développement
             </h1>
 
             <p className="mt-6 text-lg sm:text-xl text-white/85 max-w-2xl font-body leading-relaxed">
-              Nous avançons lentement, famille après famille, sans promettre de statistiques tant que les bases ne sont pas solides.
+              Jamaa United met la famille au cœur du développement social en la rendant actrice du changement. Upendo – Akili – Matendo.
             </p>
 
             <div className="mt-8 flex items-center gap-3">
@@ -56,9 +56,9 @@ const HeroSection = () => {
                 className="text-white/90 hover:text-white"
               >
                 <Icon name="ArrowRight" size={16} className="mr-2" />
-                Demander un court appel
+                Rejoindre la vision
               </Button>
-              <span className="text-xs uppercase tracking-widest text-white/60">Réponse sous 48h</span>
+              <span className="text-xs uppercase tracking-widest text-white/60">Devenir acteur du changement</span>
             </div>
 
             <div className="mt-10 flex flex-col gap-3 border-l border-white/15 pl-6 text-white/85">

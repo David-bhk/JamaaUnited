@@ -9,26 +9,26 @@ export const pillarsData = [
     textColor: 'text-primary',
     borderColor: 'border-primary',
     summary:
-      "Upendo ramène l'amour à quelque chose de concret : écouter, rassurer et garder les liens ouverts.",
+      "L'union et le vivre ensemble. Upendo crée des liens solides entre familles pour bâtir une communauté unie.",
     description:
-      "Sessions courtes centrées sur l'écoute et la sécurité émotionnelle pour que chaque famille respire à nouveau.",
+      "Renforcer la cohésion sociale et la paix à travers des cercles d'écoute et de solidarité familiale.",
     image:
       'https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
     detailImage:
       'https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&h=800&fit=crop',
     stats: [
-      { number: '15 familles', label: 'phase pilote' }
+      { number: '10 familles', label: 'objectif 2025' }
     ],
     activities: [
-      'Cercles d’écoute',
-      'Mentorat familial'
+      'Cercles de cohabitation',
+      'Médiation familiale'
     ],
     principles: [
-      'Écouter avant d\'agir',
-      'Créer des espaces sûrs'
+      'La famille est la cellule de base',
+      'Si la famille va bien, la société ira mieux'
     ],
     impact:
-      'Les familles testent le protocole Upendo avant un déploiement large.'
+      'Chaque famille devient une brique de la maison Jamaa United.'
   },
   {
     id: 'akili',
@@ -40,26 +40,26 @@ export const pillarsData = [
     textColor: 'text-secondary',
     borderColor: 'border-secondary',
     summary:
-      "Akili garde seulement les outils utiles : un kit léger de décisions claires et partagées.",
+      "Réflexion, planification et sagesse. Akili apporte les outils pour des décisions éclairées.",
     description:
-      "Ateliers express pour transférer des méthodes simples : budget, médiation et plan d’étude maison.",
+      "Formation et accompagnement pour développer le leadership familial et communautaire.",
     image:
       'https://images.pexels.com/photos/1181534/pexels-photo-1181534.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
     detailImage:
       'https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?w=600&h=800&fit=crop',
     stats: [
-      { number: '8 ateliers', label: 'sur 6 semaines' }
+      { number: '100 familles', label: 'objectif 2026' }
     ],
     activities: [
-      'Mini-labs leadership',
-      'Budget familial guidé'
+      'Formation en leadership',
+      'Éducation et mentorat'
     ],
     principles: [
-      'Partager seulement l\'essentiel',
-      'Mesurer ce qui change vraiment'
+      'Identifier et organiser les familles',
+      'Cultiver une nouvelle vision du monde'
     ],
     impact:
-      "Les familles repartent avec deux plans simples : comment parler finances et comment calmer les tensions."
+      "Les familles deviennent actrices du changement dans leur communauté."
   },
   {
     id: 'matendo',
@@ -71,25 +71,25 @@ export const pillarsData = [
     textColor: 'text-sky-600',
     borderColor: 'border-sky-500',
     summary:
-      "Matendo ne garde que les actions faisables cette semaine et mesurables simplement.",
+      "Des idées concrètes et innovantes pour des solutions à impact positif.",
     description:
-      "Micro-projets de terrain qui testent une idée sur un seul quartier avant de l’étendre.",
+      "Initiatives collectives en éducation, santé, entrepreneuriat et développement communautaire.",
     image:
       'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
     detailImage:
       'https://images.pixabay.com/photo/2016/11/19/21/05/hand-1841827_1280.jpg?w=600&h=800&fit=crop',
     stats: [
-      { number: '3 chantiers', label: 'testés en 2025' }
+      { number: '1 000 000', label: 'familles d\'ici 2030' }
     ],
     activities: [
-      'Chantiers éclair',
-      'Brigades de voisinage'
+      'Projets de développement',
+      'Entrepreneuriat communautaire'
     ],
     principles: [
-      'Petites équipes, livrables clairs',
-      'Partager les leçons avant d\'étendre'
+      'Lancer des initiatives collectives',
+      'Chaque famille est une brique'
     ],
     impact:
-      'Chaque expérimentation documentée nourrit la feuille de route Matendo.'
+      'Ensemble, les familles forment la maison Jamaa United.'
   }
 ];

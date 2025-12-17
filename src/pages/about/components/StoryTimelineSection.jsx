@@ -3,30 +3,30 @@ import Icon from '../../../components/AppIcon';
 
 const TIMELINE = [
   {
-    year: '2023',
-    title: 'Observation discrète',
-    summary: 'Écouter, prendre note, rien promettre.',
+    year: 'Étape 1',
+    title: 'Identification',
+    summary: 'Recenser et organiser les familles.',
     notes: [
-      '3 réunions de quartier par mois',
-      'Carnets partagés pour capturer les tensions'
+      'Toucher le problème par sa racine',
+      'Première école de la vie'
     ]
   },
   {
-    year: '2024',
-    title: 'Prototype Upendo / Akili / Matendo',
-    summary: 'Des mini outils testés en binôme famille + facilitateur.',
+    year: 'Étape 2',
+    title: 'Cohabitation',
+    summary: 'Renforcer l\'unité et la paix.',
     notes: [
-      '4 carnets et audios tournent en continu',
-      'Chaque séance note « à garder / à revoir »'
+      'Source naturelle de solidarité',
+      'Le lien familial est indissociable'
     ]
   },
   {
-    year: '2025',
-    title: 'Phase pilote assumée',
-    summary: '15 familles fondatrices, 4 quartiers, rythme hebdo.',
+    year: 'Étape 3',
+    title: 'Développement',
+    summary: 'Lancer des initiatives collectives.',
     notes: [
-      'Livret interne mensuel (pas public)',
-      'On ouvre des places si deux quartiers valident'
+      'Éducation, entrepreneuriat, santé, paix',
+      'Chaque famille est une brique'
     ]
   }
 ];
@@ -36,9 +36,9 @@ const StoryTimelineSection = () => {
     <section className="py-20 bg-background">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-heading font-bold text-foreground mb-2">Notre fil conducteur</h2>
+          <h2 className="text-3xl font-heading font-bold text-foreground mb-2">Nexus social en 3 étapes</h2>
           <p className="text-base text-muted-foreground">
-            Trois étapes pour expliquer pourquoi nous avançons lentement et ce que nous partageons déjà.
+            Notre approche à trois dimensions pour transformer les communautés.
           </p>
         </div>
 

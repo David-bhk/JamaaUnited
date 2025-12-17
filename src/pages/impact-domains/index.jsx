@@ -8,54 +8,144 @@ import Icon from '../../components/AppIcon';
 import Button from '../../components/ui/Button';
 
 const HERO_HIGHLIGHTS = [
-  { id: 1, icon: 'Users', label: 'Familles pilotes', value: '15' },
-  { id: 2, icon: 'MapPin', label: 'Quartiers suivis', value: '4' }
+  { id: 1, icon: 'Users', label: 'Objectif 2025', value: '10 familles' },
+  { id: 2, icon: 'Target', label: 'Objectif 2030', value: '1M familles' }
 ];
 
 const IMPACT_DOMAINS = [
   {
     id: 1,
-    title: 'Renforcement familial',
-    subtitle: 'Priorité aux conversations honnêtes',
-    description: 'Petites médiations guidées pour calmer les tensions à la maison.',
-    fullDescription: 'Nous réunissons 5 familles à la fois, documentons chaque progrès et partageons les outils utiles seulement après test.',
-    category: 'family',
-    familiesServed: 15,
+    title: 'Éducation et formation',
+    subtitle: 'Première école de la vie',
+    description: 'Accompagner les familles dans l\'éducation et le développement des compétences.',
+    fullDescription: 'La famille est la première école où l\'on apprend l\'amour, le respect, le travail et la responsabilité.',
+    category: 'education',
+    familiesServed: 10,
     communitiesReached: 2,
-    impactScore: 92,
+    impactScore: 90,
     programs: [
-      { name: 'Parole en famille', description: '30 minutes hebdo, carnet partagé' },
-      { name: 'Cercles lumière', description: '2 animateurs, 6 familles, 4 rencontres' }
+      { name: 'Mentorat familial', description: 'Accompagnement personnalisé' },
+      { name: 'Formation leadership', description: 'Développer les compétences' }
     ]
   },
   {
     id: 2,
-    title: 'Éducation & jeunesse',
-    subtitle: 'Alléger le parcours scolaire',
-    description: 'Tutorat pair-à-pair et mini-bourses pour garder les jeunes en classe.',
-    fullDescription: 'Nous finançons le strict nécessaire (frais, uniformes) et suivons les progrès via un groupe de mentors.',
-    category: 'education',
-    familiesServed: 25,
+    title: 'Santé et nutrition',
+    subtitle: 'Bien-être familial',
+    description: 'Promouvoir la santé et une bonne nutrition au sein des familles.',
+    fullDescription: 'Des familles en bonne santé construisent des communautés résilientes.',
+    category: 'health',
+    familiesServed: 15,
     communitiesReached: 3,
     impactScore: 88,
     programs: [
-      { name: 'Bourses 1-2-3', description: 'Inscription, uniformes, carnet' },
-      { name: 'Mentors pairs', description: 'Jeunes diplômés soutiennent 3 élèves chacun' }
+      { name: 'Sensibilisation santé', description: 'Prévention et éducation' },
+      { name: 'Nutrition familiale', description: 'Alimentation équilibrée' }
     ]
   },
   {
     id: 3,
-    title: 'Santé de proximité',
-    subtitle: 'Soins essentiels, sans lourdeur',
-    description: 'Visites mobiles qui couvrent vaccin, tension et écoute psychosociale.',
-    fullDescription: 'Une équipe mixte passe chaque semaine, note les urgences et oriente vers les partenaires santé.',
-    category: 'health',
-    familiesServed: 32,
+    title: 'Entrepreneuriat et leadership',
+    subtitle: 'Autonomisation économique',
+    description: 'Développer l\'esprit d\'entreprise et le leadership familial.',
+    fullDescription: 'Rendre les familles actrices de leur propre développement économique.',
+    category: 'economic',
+    familiesServed: 20,
     communitiesReached: 4,
     impactScore: 85,
     programs: [
-      { name: 'Clinique mobile', description: 'Matériel léger, suivi immédiat' },
-      { name: 'Pause mentale', description: 'Espaces silencieux après la tournée médicale' }
+      { name: 'Micro-entreprises', description: 'Lancer son activité' },
+      { name: 'Leadership familial', description: 'Gestion et planification' }
+    ]
+  },
+  {
+    id: 4,
+    title: 'Cohésion sociale et paix',
+    subtitle: 'Vivre ensemble',
+    description: 'Renforcer l\'unité et la paix au sein des communautés.',
+    fullDescription: 'Bâtir des ponts entre familles pour une cohabitation harmonieuse.',
+    category: 'peace',
+    familiesServed: 25,
+    communitiesReached: 5,
+    impactScore: 92,
+    programs: [
+      { name: 'Médiation familiale', description: 'Résolution des conflits' },
+      { name: 'Cercles de paix', description: 'Dialogue intercommunautaire' }
+    ]
+  },
+  {
+    id: 5,
+    title: 'Protection et genre',
+    subtitle: 'Lutte contre les VBG',
+    description: 'Protéger les familles et lutter contre les violences basées sur le genre.',
+    fullDescription: 'Chaque membre de la famille mérite protection et respect.',
+    category: 'protection',
+    familiesServed: 12,
+    communitiesReached: 3,
+    impactScore: 87,
+    programs: [
+      { name: 'Sensibilisation VBG', description: 'Prévention et signalement' },
+      { name: 'Accompagnement', description: 'Soutien aux victimes' }
+    ]
+  },
+  {
+    id: 6,
+    title: 'Environnement et climat',
+    subtitle: 'Développement durable',
+    description: 'Sensibiliser les familles à la protection de l\'environnement.',
+    fullDescription: 'Des actions concrètes pour un avenir durable.',
+    category: 'environment',
+    familiesServed: 18,
+    communitiesReached: 4,
+    impactScore: 80,
+    programs: [
+      { name: 'Reboisement', description: 'Planter pour demain' },
+      { name: 'Éco-gestes', description: 'Pratiques durables au quotidien' }
+    ]
+  },
+  {
+    id: 7,
+    title: 'Eau, hygiène et assainissement',
+    subtitle: 'WASH',
+    description: 'Améliorer l\'accès à l\'eau potable et aux infrastructures sanitaires.',
+    fullDescription: 'L\'eau propre et l\'hygiène sont essentielles à la santé familiale.',
+    category: 'wash',
+    familiesServed: 22,
+    communitiesReached: 5,
+    impactScore: 86,
+    programs: [
+      { name: 'Points d\'eau', description: 'Accès à l\'eau potable' },
+      { name: 'Hygiène familiale', description: 'Bonnes pratiques' }
+    ]
+  },
+  {
+    id: 8,
+    title: 'Urgences humanitaires',
+    subtitle: 'Assistance sociale',
+    description: 'Répondre aux urgences et apporter une assistance aux familles vulnérables.',
+    fullDescription: 'Solidarité et entraide face aux crises.',
+    category: 'humanitarian',
+    familiesServed: 30,
+    communitiesReached: 6,
+    impactScore: 89,
+    programs: [
+      { name: 'Aide d\'urgence', description: 'Réponse rapide' },
+      { name: 'Réhabilitation', description: 'Accompagnement post-crise' }
+    ]
+  },
+  {
+    id: 9,
+    title: 'Renforcement familial',
+    subtitle: 'Cellule de base',
+    description: 'Renforcer la structure et les liens familiaux.',
+    fullDescription: 'La famille est la cellule de base de toute société.',
+    category: 'family',
+    familiesServed: 10,
+    communitiesReached: 2,
+    impactScore: 95,
+    programs: [
+      { name: 'Cercles familiaux', description: 'Dialogue et écoute' },
+      { name: 'Cohabitation', description: 'Vivre ensemble' }
     ]
   }
 ];
@@ -63,23 +153,23 @@ const IMPACT_DOMAINS = [
 const TESTIMONIALS = [
   {
     id: 1,
-    name: 'Marie Mukamana',
+    name: 'Famille Mukamana',
     location: 'Goma',
     domain: 'Renforcement familial',
     quote:
-      "Trois rencontres et nos repas sont redevenus paisibles.",
-    date: 'Mars 2024',
-    impact: 'Dialogue relancé'
+      "Depuis que nous avons rejoint Jamaa United, notre famille a retrouvé l'unité et la paix.",
+    date: 'Décembre 2024',
+    impact: 'Cohésion renforcée'
   },
   {
     id: 2,
-    name: 'Grace Uwimana',
-    location: 'Butembo',
+    name: 'Famille Uwimana',
+    location: 'Goma',
     domain: 'Éducation',
     quote:
-      "La bourse couvre l'essentiel, on respire enfin.",
-    date: 'Janvier 2024',
-    impact: 'Frais réglés'
+      "Nos enfants ont maintenant accès à un meilleur accompagnement scolaire.",
+    date: 'Décembre 2024',
+    impact: 'Formation continue'
   }
 ];
 
@@ -123,10 +213,10 @@ const ImpactDomains = () => {
               Domaines d’intervention
             </p>
             <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-6">
-              Là où Jamaa United transforme les communautés
+              9 domaines pour transformer les communautés
             </h1>
             <p className="text-base text-primary-foreground/90 max-w-2xl mx-auto">
-              Nous avançons sur trois domaines maximum à la fois pour rester précis et honnêtes dans nos suivis.
+              De l'éducation aux urgences humanitaires, nous intervenons là où les familles ont besoin de soutien.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
               {HERO_HIGHLIGHTS.map((item) => (

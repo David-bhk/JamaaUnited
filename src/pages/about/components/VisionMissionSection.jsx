@@ -5,7 +5,7 @@ const CARDS = [
   {
     title: 'Vision',
     text:
-      'Rester proches de 15 familles, documenter ce qui marche et partager uniquement ce qui tient sur le terrain.',
+      'Construire une communauté unie et collaborative où les familles sont les piliers de la paix et du développement.',
     icon: 'Eye',
     chip: {
       bg: 'bg-primary/10',
@@ -15,7 +15,7 @@ const CARDS = [
   {
     title: 'Mission',
     text:
-      'Upendo, Akili et Matendo : trois piliers appliqués chaque semaine, carnet ouvert et voix des familles en premier.',
+      'Mettre la famille au cœur du développement social en la rendant actrice du changement.',
     icon: 'Target',
     chip: {
       bg: 'bg-secondary/10',
@@ -26,19 +26,19 @@ const CARDS = [
 
 const VALUES = [
   {
-    title: 'Familles limitées',
-    description: '15 familles maximum pour rester joignables et honnêtes.',
-    icon: 'Users'
+    title: 'Upendo (Amour)',
+    description: 'Union et vivre ensemble – la base de toute communauté forte.',
+    icon: 'Heart'
   },
   {
-    title: 'Outils courts',
-    description: 'Chaque ressource tient sur une page et un mémo audio.',
-    icon: 'FileText'
+    title: 'Akili (Intelligence)',
+    description: 'Réflexion, planification et sagesse pour des décisions éclairées.',
+    icon: 'Brain'
   },
   {
-    title: 'Notes partagées',
-    description: 'Succès comme blocages sont consignés dès la séance.',
-    icon: 'ClipboardCheck'
+    title: 'Matendo (Actions)',
+    description: 'Des idées concrètes et innovantes pour des solutions à impact positif.',
+    icon: 'Zap'
   }
 ];
 
@@ -50,7 +50,7 @@ const VisionMissionSection = () => {
           <p className="text-sm uppercase tracking-[0.25em] text-muted-foreground">Vision & Mission</p>
           <h2 className="mt-3 text-3xl font-heading font-bold text-foreground">Notre boussole</h2>
           <p className="mt-3 text-base text-muted-foreground">
-            Deux phrases qui nous servent de filtre avant chaque réunion.
+            Notre conviction : si la famille va bien, la société ira aussi mieux.
           </p>
         </div>
 
@@ -69,8 +69,8 @@ const VisionMissionSection = () => {
         <div className="mt-14 rounded-2xl border border-border bg-muted/30 p-6">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div>
-              <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">Notre manière de faire</p>
-              <h3 className="mt-2 text-2xl font-heading font-bold text-foreground">Trois réflexes simples</h3>
+              <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">Nos valeurs</p>
+              <h3 className="mt-2 text-2xl font-heading font-bold text-foreground">Trois piliers fondateurs</h3>
             </div>
           </div>
           <div className="mt-6 grid gap-4 md:grid-cols-3">
